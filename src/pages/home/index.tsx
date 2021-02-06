@@ -1,6 +1,7 @@
 import "src/pages/home/style.sass";
-import React, { FC, FormEvent, useEffect, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { swapiPlanet, swapiPlanetSearch } from "src/types/swapi";
+import { BASE_API_URL } from "src/config";
 import { Planet } from "src/components/planet";
 import { Redirect } from "react-router-dom";
 import { StateInterface } from "src/redux";
@@ -29,7 +30,7 @@ const Home: FC = () => {
     const {
       data: swapiPlanetSearchResult,
     } = await axios.get<swapiPlanetSearch>(
-      `https://swapi.dev/api/planets?search=${search}&page=${page}`,
+      `${BASE_API_URL}/planets?search=${search}&page=${page}`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -48,7 +49,6 @@ const Home: FC = () => {
   };
 
   const searchPlanets = async (search: string) => {
-    console.log("search", search);
     try {
       const {
         data: swapiPlanetSearchResult,
@@ -81,14 +81,14 @@ const Home: FC = () => {
       });
       setTotalPopulation(totalPopulationIncrements);
       setPlanets(planetsPerPage);
-
-      console.log("totalPopulation", totalPopulation);
-      console.log("totalPopulationIncrements", totalPopulationIncrements);
-      console.log("planets", planets);
     } catch (e) {
       console.log(e);
     }
   };
+
+  useEffect(() => {
+    searchPlanets("");
+  }, []);
 
   if (!state.user.isLoggedIn) return <Redirect to="/login" />;
 

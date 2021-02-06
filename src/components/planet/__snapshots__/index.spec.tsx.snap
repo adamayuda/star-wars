@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`src/components/loading/index.tsx Render Loading component 1`] = `
+<div>
+  <div
+    class="planet"
+  >
+    <h2>
+      Muunilinst
+    </h2>
+    <div
+      class="bar"
+      style="width: 500000000000%;"
+    />
+    <p>
+      500000000000.000
+      % of the total population
+    </p>
+  </div>
+</div>
+`;

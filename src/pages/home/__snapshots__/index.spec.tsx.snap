@@ -1,66 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`src/pages/home/index.tsx Render Home page 1`] = `
+exports[`src/pages/home/index.tsx Render Home page 1`] = `<div />`;
+
+exports[`src/pages/home/index.tsx Render Home page 2`] = `
 <div>
-  <nav>
-    <div
-      class="container"
-    >
-      <div
-        class="navGrid"
-      >
-        <img
-          alt="LinkedTeam"
-          src="test-file-stub"
-        />
-        <img
-          alt="LinkedTeam"
-          src="test-file-stub"
-        />
-        <img
-          alt="LinkedTeam"
-          src="test-file-stub"
-        />
-      </div>
-    </div>
-  </nav>
-  <div
-    class="navBottom"
-  >
-    <div
-      class="navGrid"
-    >
-      <img
-        alt="LinkedTeam"
-        src="test-file-stub"
-      />
-      <img
-        alt="LinkedTeam"
-        src="test-file-stub"
-      />
-      <img
-        alt="LinkedTeam"
-        src="test-file-stub"
-      />
-      <img
-        alt="LinkedTeam"
-        src="test-file-stub"
-      />
-      <img
-        alt="LinkedTeam"
-        src="test-file-stub"
-      />
-    </div>
-  </div>
   <div
     class="home"
   >
     <div
       class="container"
     >
-      <div
-        class="posts"
+      <input
+        id="search"
+        placeholder="Search"
+        type="text"
       />
+      <div
+        class="planets"
+      >
+        <h2>
+          Total planets found: 
+          0
+          <br />
+          Total population: 
+          0
+        </h2>
+      </div>
     </div>
   </div>
 </div>

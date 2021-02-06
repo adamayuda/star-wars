@@ -1,6 +1,6 @@
 import "./style.sass";
 
-import React, { ComponentType, FC, Suspense, lazy } from "react";
+import React, { FC, Suspense, lazy } from "react";
 
 import { Route, RouteProps, Switch } from "react-router-dom";
 

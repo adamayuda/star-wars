@@ -1,18 +1,14 @@
 import "src/pages/login/style.sass";
 import React, { FC, FormEvent, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { BASE_API_URL } from "src/config";
 import PropTypes from "prop-types";
 import { RouteComponentProps } from "react-router-dom";
-import { StateInterface } from "src/redux";
 import axios from "axios";
 import { swapiPeopleSearch } from "src/types/swapi";
+import { useDispatch } from "react-redux";
 
-interface test {
-  ok: string;
-}
 const Login: FC<RouteComponentProps> = ({ history }) => {
   const dispatch = useDispatch();
-  const state = useSelector<StateInterface, StateInterface>((state) => state);
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -24,7 +20,7 @@ const Login: FC<RouteComponentProps> = ({ history }) => {
       const {
         data: swapiPeopleSearchResult,
       } = await axios.get<swapiPeopleSearch>(
-        `https://swapi.dev/api/people?search=${name}`,
+        `${BASE_API_URL}/people?search=${name}`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -32,7 +28,7 @@ const Login: FC<RouteComponentProps> = ({ history }) => {
         },
       );
       const { count, results } = swapiPeopleSearchResult;
-      console.log(count, results);
+
       if (
         count === 1 &&
         name === results[0].name &&
@@ -54,12 +50,13 @@ const Login: FC<RouteComponentProps> = ({ history }) => {
       <div className="login">
         <div className="container">
           <div className="content">
-            <form className="form" onSubmit={submit}>
+            <form className="form" data-testid="form" onSubmit={submit}>
               <div>
                 <label htmlFor="name">Name</label>
                 <input
                   type="text"
                   id="name"
+                  data-testid="name-input"
                   placeholder="Name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -70,13 +67,14 @@ const Login: FC<RouteComponentProps> = ({ history }) => {
                 <input
                   type="password"
                   id="password"
+                  data-testid="password-input"
                   placeholder="********"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
               {error && <p>{error}</p>}
-              <button>Login</button>
+              <button data-testid="login-button">Login</button>
             </form>
           </div>
         </div>

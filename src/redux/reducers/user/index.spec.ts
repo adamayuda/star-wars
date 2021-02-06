@@ -1,18 +1,17 @@
 import { UserState, user } from ".";
 
 describe("src/redux/reducers/user/index.ts", () => {
-  test("update state when calling settings with action type UPDATE_USER_INFO", () => {
+  test("update state when calling settings with action type USER_LOGIN", () => {
     const settingsState = user(undefined, {
-      type: "UPDATE_USER_INFO",
+      type: "USER_LOGIN",
       payload: {
-        username: "Adam",
-        picture: "/picture/test.jpg",
+        isLoggedIn: false,
+        name: "Luke",
       },
     });
     expect(settingsState).toMatchObject<UserState>({
-      username: "Adam",
-      picture: "/picture/test.jpg",
-      token: "",
+      isLoggedIn: false,
+      name: "Luke",
     });
   });
 });
