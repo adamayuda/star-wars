@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`src/app/index.tsx Render App page 1`] = `
+<div>
+  <div
+    class="loading"
+  >
+    <img
+      alt="LinkedTeam"
+      src="test-file-stub"
+    />
+  </div>
+</div>
+`;
+
+exports[`src/app/index.tsx Render App page with laptop device 1`] = `
+<div>
+  <div
+    class="loading"
+  >
+    <img
+      alt="LinkedTeam"
+      src="test-file-stub"
+    />
+  </div>
+</div>
+`;

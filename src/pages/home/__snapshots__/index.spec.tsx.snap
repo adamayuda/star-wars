@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`src/pages/home/index.tsx Render Home page 1`] = `
+<div>
+  <nav>
+    <div
+      class="container"
+    >
+      <div
+        class="navGrid"
+      >
+        <img
+          alt="LinkedTeam"
+          src="test-file-stub"
+        />
+        <img
+          alt="LinkedTeam"
+          src="test-file-stub"
+        />
+        <img
+          alt="LinkedTeam"
+          src="test-file-stub"
+        />
+      </div>
+    </div>
+  </nav>
+  <div
+    class="navBottom"
+  >
+    <div
+      class="navGrid"
+    >
+      <img
+        alt="LinkedTeam"
+        src="test-file-stub"
+      />
+      <img
+        alt="LinkedTeam"
+        src="test-file-stub"
+      />
+      <img
+        alt="LinkedTeam"
+        src="test-file-stub"
+      />
+      <img
+        alt="LinkedTeam"
+        src="test-file-stub"
+      />
+      <img
+        alt="LinkedTeam"
+        src="test-file-stub"
+      />
+    </div>
+  </div>
+  <div
+    class="home"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="posts"
+      />
+    </div>
+  </div>
+</div>
+`;

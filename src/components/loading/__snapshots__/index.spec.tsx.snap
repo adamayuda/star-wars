@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`src/components/loading/index.tsx Render Loading component 1`] = `
+<div>
+  <div
+    class="loading"
+  >
+    <img
+      alt="LinkedTeam"
+      src="test-file-stub"
+    />
+  </div>
+</div>
+`;

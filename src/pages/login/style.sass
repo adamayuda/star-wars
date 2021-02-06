@@ -1,0 +1,35 @@
+@import "src/styles/colors.sass"
+@import "src/styles/device.sass"
+
+.login
+  height: 100%
+
+  .content
+    height: 100%
+    display: grid
+    justify-items: center
+    align-items: center
+
+    form
+      min-width: 250px
+      display: grid
+      gap: 20px
+
+      div
+        display: grid
+        gap: 5px
+      label
+        font-size: 17px
+      input
+        padding: 5px 10px
+
+      button
+        background-color: $yellow
+        border: 0
+        padding: 10px 20px
+        border-radius: 5px
+        font-size: 20px
+
+@media (min-width: $breakpoint-laptop)
+  .posts
+    width: 615px
