@@ -53,7 +53,7 @@ const Home: FC = () => {
       const {
         data: swapiPlanetSearchResult,
       } = await axios.get<swapiPlanetSearch>(
-        `https://swapi.dev/api/planets?search=${search}`,
+        `${BASE_API_URL}/planets?search=${search}`,
         {
           headers: {
             "Content-Type": "application/json",

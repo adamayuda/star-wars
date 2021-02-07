@@ -6,6 +6,7 @@ import { Route, RouteProps, Switch } from "react-router-dom";
 
 import { Loading } from "src/components/loading";
 
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 interface RouteInterface extends RouteProps {
   import: Promise<any>;
 }

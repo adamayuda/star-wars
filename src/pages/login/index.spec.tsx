@@ -1,22 +1,17 @@
-import { cleanup, render, fireEvent, waitFor } from "@testing-library/react";
+import { cleanup, render, fireEvent } from "@testing-library/react";
 import axios from "axios";
-import { shallow, mount, configure } from "enzyme";
+import { configure } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 
 import Login from ".";
-import { Provider, useDispatch } from "react-redux";
+import { Provider } from "react-redux";
 import React from "react";
 
-import { BrowserRouter as Router, RouteComponentProps } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { createMainStore } from "src/redux";
 
 let mainStore = createMainStore();
 configure({ adapter: new Adapter() });
-
-// const useDispatchMock = jest.fn();
-// jest.mock("react-redux", () => {
-//   useDispatch: useDispatchMock;
-// });
 
 describe("src/pages/home/index.tsx", () => {
   afterEach(() => cleanup());
@@ -83,9 +78,7 @@ describe("src/pages/home/index.tsx", () => {
       location: {} as any,
       match: {} as any,
     };
-    // useDispatchMock = jest.fn(() => {
-    //   return {};
-    // });
+
     const component = render(
       <Provider store={mainStore}>
         <Login {...routeComponentPropsMock} />
